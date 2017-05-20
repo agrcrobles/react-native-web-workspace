@@ -1,0 +1,40 @@
+{
+  "name": "mobile",
+  "version": "0.0.1",
+  "private": true,
+  "author": "Alejandro Garcia",
+  "scripts": {
+    "test": "jest",
+    "start": "haul start"
+  },
+  "dependencies": {
+    "components": "0.0.1",
+    "react": "^15.5.4",
+    "react-native": "^0.42.0",
+    "react-navigation": "^1.0.0-beta.9",
+    "react-native-vector-icons": "^4.1.1",
+    "react-navigation-playground": "0.0.1",
+    "utils": "0.0.1"
+  },
+  "devDependencies": {
+    "babel-jest": "20.0.0",
+    "babel-preset-react-native": "1.9.1",
+    "haul-cli": "^0.5.0",
+    "jest": "20.0.0",
+    "react-test-renderer": "^15.5.4"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "preset": "react-native",
+    "transform": {
+      "^.+\\.js$": "babel-jest"
+    },
+    "transformIgnorePatterns": [
+      "node_modules/(?!react-native|react-navigation|components)"
+    ],
+    "modulePathIgnorePatterns": [
+      "/node_modules\/.*\/react-native/",
+      "/node_modules\/.*\/react/"
+    ]
+  }
+}

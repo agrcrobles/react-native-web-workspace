@@ -1,0 +1,3 @@
+{
+  "extends": "@app-press/eslint-config/client"
+}

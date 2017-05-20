@@ -1,0 +1,11 @@
+{
+  "name": "lerna",
+  "author": "Alejandro Garcia",
+  "scripts": {
+    "bootstrap": "lerna bootstrap",
+    "clean": "rm -rf ./web/node_modules && rm -rf ./mobile/node_modules && rm -rf ./components/node_modules"
+  },
+  "devDependencies": {
+    "lerna": "^2.0.0-rc.4"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "name": "web",
+  "version": "0.0.1",
+  "description": "web",
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "author": "Alejandro Garcia",
+  "license": "MIT",
+  "scripts": {
+    "web": "webpack-dev-server --config webpack.dev.config.js",
+    "start": "node server.js",
+    "build": "webpack --config webpack.prod.config.js"
+  },
+  "dependencies": {
+    "components": "0.0.1",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "react-native-vector-icons": "^4.1.1",
+    "react-native-web": "0.0.94",
+    "react-navigation": "^1.0.0-beta.10",
+    "react-navigation-playground": "0.0.1",
+    "utils": "0.0.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.21.0",
+    "babel-loader": "^6.2.10",
+    "babel-preset-react-native": "1.9.1",
+    "express": "^4.15.3",
+    "file-loader": "^0.10.0",
+    "url-loader": "^0.5.7",
+    "webpack": "^2.3.0",
+    "webpack-dev-server": "^2.4.2"
+  }
+}

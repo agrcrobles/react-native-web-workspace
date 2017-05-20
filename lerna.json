@@ -1,0 +1,12 @@
+{
+  "lerna": "2.0.0-rc.4",
+  "packages": [
+    "./components",
+    "./utils",
+    "./react-navigation-playground",
+    "./mobile",
+    "./web"
+  ],
+  "npmClient": "yarn",
+  "version": "0.0.0"
+}
