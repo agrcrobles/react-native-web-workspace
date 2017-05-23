@@ -21,7 +21,7 @@ import StacksInTabs from './StacksInTabs';
 import StacksOverTabs from './StacksOverTabs';
 import SimpleStack from './SimpleStack';
 import SimpleTabs from './SimpleTabs';
-import LinkedTab from "components";
+import LinkedTab from 'components';
 
 const ExampleRoutes = {
   LinkedTab: {

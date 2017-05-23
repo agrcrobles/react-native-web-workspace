@@ -46,7 +46,7 @@ const MyProfileScreen = ({ navigation }) => (
   />
 );
 
-MyProfileScreen.navigationOptions = props => {
+MyProfileScreen.navigationOptions = (props) => {
   const { navigation } = props;
   const { state, setParams } = navigation;
   const { params } = state;
