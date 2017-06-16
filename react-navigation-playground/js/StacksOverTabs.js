@@ -100,7 +100,7 @@ const StacksOverTabs = StackNavigator({
     screen: MyProfileScreen,
     path: '/people/:name',
     navigationOptions: ({ navigation }) => {
-      title: `${navigation.state.params.name}'s Profile!`;
+      `${navigation.state.params.name}'s Profile!`;
     },
   },
 });

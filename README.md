@@ -9,23 +9,25 @@ This boilerplate attempts to make another step in order to have it by using reac
 
 ## Quick start
 
-```
+```sh
 git clone --depth 1 https://github.com/agrcrobles/react-native-web-workspace
 ```
 
 ### Lerna
-lerna it is used to handle dependencies and speed up the development while splitting the platform from the code
+lerna in independent versioning module is used to handle dependencies and speed up the development while splitting the platform from the code
 
-```
-npm run clean
-npm run bootstrap // it installs symlinks
+```sh
+yarn
+yarn bootstrap
+# it installs symlinks
 ```
 ### react-navigation-playground and components folder
 
 These standalone libraries contain the main app shared among platforms. This is not transpiled ( TBD ), it has `react-native` and `react-navigation` as peerDependencies and a utils module symlinked.
 
-### Run the app with haul
-```
+### Run the app with haul using react-native-cli
+
+```sh
 cd mobile
 yarn start -- --platform android
 react-native run-android
@@ -36,11 +38,12 @@ react-native run-ios
 # on ios
 ```
 
-### Run the web
-```
+### Run the web in development server
+```sh
 cd web
-yarn run web // start dev server
+yarn web
 ```
+Project is running at http://localhost:3000/
 
 ## License
 
