@@ -9,44 +9,33 @@ This boilerplate attempts to make another step in order to have it by using reac
 
 ## Quick start
 
-```sh
+```
 git clone --depth 1 https://github.com/agrcrobles/react-native-web-workspace
 ```
 
 ### Lerna
-lerna in independent versioning module is used to handle dependencies and speed up the development while splitting the platform from the code
+lerna it is used to hoist dependencies from a project root and speed up the development while splitting the platform from the code
 
-```sh
-yarn
-yarn bootstrap
-# it installs symlinks
 ```
-### react-navigation-playground and components folder
-
-These standalone libraries contain the main app shared among platforms. This is not transpiled ( TBD ), it has `react-native` and `react-navigation` as peerDependencies and a utils module symlinked.
-
-### Run the app with haul using react-native-cli
-
-```sh
-cd mobile
-yarn start -- --platform android
-react-native run-android
-# on android
-
-yarn start -- --platform ios
-react-native run-ios
-# on ios
+npm run clean
+npm run bootstrap // it installs symlinks
 ```
 
-### Run the web in development server
-```sh
-cd web
-yarn web
-```
-Project is running at http://localhost:3000/
+### More info
+ - [react-native-web-workspace/navigation-playground](https://github.com/agrcrobles/react-native-web-workspace/tree/master/react-navigation-playground)
+ - [react-native-web-workspace/web](https://github.com/agrcrobles/react-native-web-workspace/tree/master/web)
+ - [react-native-web-workspace/mobile](https://github.com/agrcrobles/react-native-web-workspace/tree/master/mobile)
+
+## Contribute
+
+The following improvements and PR could be accepted:
+
+ - Move from yarn to npm@5
+ - Using lerna workspaces: Workspaces adds support for managing multiple packages within a single Yarn project. Linking between them on install to make cross-development simpler.
 
 ## License
 
 [MIT](https://github.com/agrcrobles/react-native-web-workspace/blob/master/LICENSE)
+
 [BSD 2-clause notice](https://github.com/agrcrobles/react-native-web-workspace/blob/master/react-navigation-playground/LICENSE)
 
