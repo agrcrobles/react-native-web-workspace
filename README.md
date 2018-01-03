@@ -16,9 +16,13 @@ git clone --depth 1 https://github.com/agrcrobles/react-native-web-workspace
 ### Lerna
 lerna it is used to hoist dependencies from a project root and speed up the development while splitting the platform from the code
 
-```
+```console
+## it cleans node_modules
 npm run clean
-npm run bootstrap // it installs symlinks
+## it installs dependencies
+npm install
+## it installs symlinks
+npm run bootstrap 
 ```
 
 ### More info
@@ -26,12 +30,9 @@ npm run bootstrap // it installs symlinks
  - [react-native-web-workspace/web](https://github.com/agrcrobles/react-native-web-workspace/tree/master/web)
  - [react-native-web-workspace/mobile](https://github.com/agrcrobles/react-native-web-workspace/tree/master/mobile)
 
-## Contribute
+## Related projects
 
-The following improvements and PR could be accepted:
-
- - Move from yarn to npm@5
- - Using lerna workspaces: Workspaces adds support for managing multiple packages within a single Yarn project. Linking between them on install to make cross-development simpler.
+* [yarn-workspaces-cra-crna](https://github.com/viewstools/yarn-workspaces-cra-crna) explains how to use yarn workspaces with Create React App and Create React Native App (Expo) to share common code across.
 
 ## License
 

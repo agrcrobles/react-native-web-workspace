@@ -1,4 +1,4 @@
-package com.linking;
+package com.mobile;
 
 import android.app.Application;
 
@@ -26,6 +26,11 @@ public class MainApplication extends Application implements ReactApplication {
           new MainReactPackage(),
             new VectorIconsPackage()
       );
+    }
+
+    @Override
+    protected String getJSMainModuleName() {
+      return "index";
     }
   };
 

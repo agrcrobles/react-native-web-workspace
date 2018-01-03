@@ -2,7 +2,7 @@ var path = require('path')
 
 module.exports = ({ platform }, defaults) => {
   return {
-    entry: `./index.${platform}.js`,
+    entry: `./index.js`,
     devtool: 'source-map',
     resolve: {
       ...defaults.resolve,

@@ -72,13 +72,13 @@ import com.android.build.OutputFile
  * ]
  */
 
-/**
- * haul
- */
-
+project.ext.react = [
+    entryFile: "index.js"
+]
 project.ext.react = [
     cliPath: "node_modules/haul/bin/cli.js"
 ]
+
 apply from: "../../node_modules/react-native/react.gradle"
 
 /**
@@ -101,7 +101,7 @@ android {
     buildToolsVersion "23.0.1"
 
     defaultConfig {
-        applicationId "com.linking"
+        applicationId "com.mobile"
         minSdkVersion 16
         targetSdkVersion 22
         versionCode 1
