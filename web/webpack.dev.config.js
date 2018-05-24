@@ -21,7 +21,9 @@ module.exports = {
           path.resolve(__dirname, './node_modules/react-native-vector-icons'),
           path.resolve(__dirname, './node_modules/react-native-tab-view'),
           path.resolve(__dirname, './node_modules/react-navigation-playground'),
-          path.resolve(__dirname, './node_modules/components')
+          path.resolve(__dirname, './node_modules/components'),
+          path.resolve(__dirname, './node_modules/react-navigation'),
+          path.resolve(__dirname, './node_modules/react-native-safe-area-view')
         ],
         use: [
           {
@@ -49,15 +51,16 @@ module.exports = {
   plugins: [
     new webpack.NamedModulesPlugin(),
     new webpack.DefinePlugin({
+      __DEV__: true,
       'process.env': {
         NODE_ENV: JSON.stringify('development')
       },
     })
   ],
   resolve: {
+    extensions: [ '.web.js', '.js' ],
     symlinks: false,
     alias: {
-      'react-navigation': 'react-navigation/lib/react-navigation.js',
       'react-native': 'react-native-web'
     }
   }

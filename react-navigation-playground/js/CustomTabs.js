@@ -16,7 +16,6 @@ import {
   createNavigator,
   createNavigationContainer,
   TabRouter,
-  addNavigationHelpers,
 } from 'react-navigation';
 import SampleText from './SampleText';
 
@@ -25,7 +24,6 @@ const MyNavScreen = ({ navigation, banner }) => (
     <SampleText>{banner}</SampleText>
     <Button
       onPress={() => {
-        debugger;
         navigation.goBack(null);
       }}
       title="Go back"
@@ -62,22 +60,6 @@ const CustomTabBar = ({ navigation }) => {
   );
 };
 
-const CustomTabView = ({ router, navigation }) => {
-  const { routes, index } = navigation.state;
-  const ActiveScreen = router.getComponentForState(navigation.state);
-  return (
-    <View style={styles.container}>
-      <CustomTabBar navigation={navigation} />
-      <ActiveScreen
-        navigation={addNavigationHelpers({
-          ...navigation,
-          state: routes[index],
-        })}
-      />
-    </View>
-  );
-};
-
 const CustomTabRouter = TabRouter(
   {
     Home: {
@@ -99,8 +81,25 @@ const CustomTabRouter = TabRouter(
   }
 );
 
+const CustomTabView = (props) => {
+  const { navigation } = props;
+  const { routes, index } = navigation.state;
+  const ActiveScreen = CustomTabRouter.getComponentForState(navigation.state);
+  return (
+    <View style={styles.container}>
+      <CustomTabBar navigation={navigation} />
+      <ActiveScreen
+        navigation={{
+          ...navigation,
+          state: routes[index],
+        }}
+      />
+    </View>
+  );
+};
+
 const CustomTabs = createNavigationContainer(
-  createNavigator(CustomTabRouter)(CustomTabView)
+  createNavigator(CustomTabView, CustomTabRouter)
 );
 
 const styles = StyleSheet.create({
