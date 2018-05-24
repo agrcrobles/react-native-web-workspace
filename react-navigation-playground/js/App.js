@@ -115,8 +115,7 @@ const AppNavigator = StackNavigator(
   {
     ...ExampleRoutes,
     Index: {
-      screen: MainScreen,
-      path: '/home',
+      screen: MainScreen
     },
   },
   {
