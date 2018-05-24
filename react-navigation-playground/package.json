@@ -27,8 +27,8 @@
     "components": "*",
     "react": "*",
     "react-native": "*",
-    "react-navigation": "*",
-    "react-native-vector-icons": "^4.x.x"
+    "react-native-vector-icons": "^4.x.x",
+    "react-navigation": "*"
   },
   "dependencies": {
     "prop-types": "^15.5.8",

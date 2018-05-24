@@ -16,7 +16,9 @@ module.exports = {
           path.resolve(__dirname, './node_modules/react-native-vector-icons'),
           path.resolve(__dirname, './node_modules/react-native-tab-view'),
           path.resolve(__dirname, './node_modules/react-navigation-playground'),
-          path.resolve(__dirname, './node_modules/components')
+          path.resolve(__dirname, './node_modules/components'),
+          path.resolve(__dirname, './node_modules/react-navigation'),
+          path.resolve(__dirname, './node_modules/react-native-safe-area-view')
         ],
         use: [
           {
@@ -55,9 +57,9 @@ module.exports = {
     })
   ],
   resolve: {
+    extensions: ['.web.js', '.js', '.json', '.jsx'],
     symlinks: false, // otherwise components won't find the preset
     alias: {
-      'react-navigation': 'react-navigation/lib/react-navigation.js',
       'react-native': 'react-native-web'
     }
   }
